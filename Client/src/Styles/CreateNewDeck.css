@@ -1,0 +1,32 @@
+.create-new-deck p, h3{
+  margin: 0;
+}
+
+.card-view{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .card-view > button{
+    width: 125px;
+  }
+  
+  .create-new-deck{
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .create-new-deck__card-search{
+    border: 1px solid black;
+    width: 60%;
+  }
+  
+  .create-new-deck__deck-list{
+    border: 1px solid black;
+    width: 40%;
+    text-align: center;
+    min-height: 80vh;
+  }
+  
