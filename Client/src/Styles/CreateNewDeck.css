@@ -1,32 +1,42 @@
-.create-new-deck p, h3{
+.edit-deck p,
+h3 {
   margin: 0;
 }
 
-.card-view{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    flex-direction: column;
-  }
-  
-  .card-view > button{
-    width: 125px;
-  }
-  
-  .create-new-deck{
-    display: flex;
-    flex-direction: row;
-  }
-  
-  .create-new-deck__card-search{
-    border: 1px solid black;
-    width: 60%;
-  }
-  
-  .create-new-deck__deck-list{
-    border: 1px solid black;
-    width: 40%;
-    text-align: center;
-    min-height: 80vh;
-  }
-  
+.card-view {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card-view>button {
+  width: 125px;
+}
+
+.edit-deck {
+  display: flex;
+  flex-direction: row;
+}
+
+.edit-deck__card-search {
+  border: 1px solid black;
+  width: 60%;
+}
+
+.edit-deck__deck-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+  min-height: 80vh;
+}
+
+.edit-deck__card-type-heading {
+  width: 100%;
+  text-align: center;
+  background-color: #333333;
+  color: white;
+  border-radius: 10px;
+  padding: 2.5px;
+}

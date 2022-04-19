@@ -22,4 +22,11 @@ form > input {
   flex-wrap: wrap;
 }
 
+.deck-card__trash-i{
+  float: right;
+  font-size: .85em;
+  cursor: pointer;
+  color: red;
+}
+
 

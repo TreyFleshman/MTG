@@ -11,7 +11,7 @@ import LogIn from './Components/Auth/LogIn';
 import Homepage from './Components/Home/Homepage';
 import SearchCards from './Components/Pages/SearchCards';
 import Decks from './Components/Pages/Decks';
-import CreateNewDeck from './Components/Pages/CreateNewDeck';
+import EditDeck from './Components/Pages/EditDeck';
 
 class App extends React.Component {
 
@@ -40,7 +40,8 @@ class App extends React.Component {
             <Route exact path="/sign-up" element={<SignUp />} />
             <Route exact path="/search-cards" element={<SearchCards />} />
             <Route exact path="/decks" element={<Decks />} />
-            <Route exact path="/create-new-deck" element={<CreateNewDeck />} />
+            <Route exact path="/edit-deck" element={<EditDeck />} />
+            <Route exact path="/edit-deck/:id" element={<EditDeck />} />
           </Routes>
         </section>
       </main>

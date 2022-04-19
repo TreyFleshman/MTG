@@ -16,4 +16,5 @@ app.listen(port, () => {
 
   });
   console.log(`http://localhost:${port}/users`);
+  console.log(`http://localhost:${port}/decks`);
 });

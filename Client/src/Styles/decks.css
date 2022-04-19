@@ -1,0 +1,16 @@
+.decks{
+
+}
+
+.decks__deck-card{
+    text-align: center;
+}
+
+
+.decks__user-decks-section{
+    padding-top: 50px;
+    display: flex;
+    column-gap: 25px;
+    row-gap: 25px;
+    flex-wrap: wrap;
+}
