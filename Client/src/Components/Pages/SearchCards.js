@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import StockCard from '../Other/StockCard';
 
 const SearchCards = () => {
 
@@ -32,7 +33,7 @@ const SearchCards = () => {
                 {res.cards ? res.cards.map((card) => {
                     return (
                         <section key={card.id}>
-                            {card.imageUrl? <img src={card.imageUrl} style={{ height: '311px', width: '223px', margin: '10px' }} /> : null}
+                            {card.imageUrl ? <img src={card.imageUrl} style={{ height: '311px', width: '223px', margin: '10px' }} /> : <StockCard card={card} />}
                         </section>
                     )
                 }) : null}
