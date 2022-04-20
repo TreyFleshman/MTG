@@ -31,30 +31,22 @@ const EditDeck = () => {
                 .then((res) => { setRes(res.data); })
         }
     }
-
     const shiftString = (type) => {
-        if(type.split(' — ').shift() === 'Basic Land') {
-            return type.split(' — ').shift().split('Basic ').pop().toLowerCase() + 's';
-        } else {
-            return type.split(' — ').shift().toLowerCase() + 's';
-        }
+        const newType = type.split(' ').filter(item => item === "Creature" || item === "Artifact" || item === "Instant" || item === "Sorcery" || item === "Enchantment" || item === "Land");
+        return newType.shift().toLowerCase() + 's';
     }
 
     const handleAddToDeck = async (e, card) => {
         const currCard = new CardData(card.id, card.name, card.set, card.cmc, card.imageUrl, card.manaCost, card.text, card.type, card.types);
         const currCardType = shiftString(card.type);
-        if(deckList[currCardType].some(card => card.id === currCard.id)){
+        if (deckList[currCardType].some(card => card.id === currCard.id)) {
             alert('Card Already Added');
-        }else {
+        } else {
             setDeckList(deckList[currCardType].push(currCard));
             const currentDeck = await DECK_API.findDeck(deckID);
             currentDeck[currCardType].push(currCard);
             DECK_API.editDeck(currentDeck);
         }
-    }
-
-    const handleAddLands = (e) => {
-        setLands(e.target.value);
     }
 
     const handleRemoveFromDeck = (e, card) => {

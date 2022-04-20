@@ -2,6 +2,34 @@
   background: slategray;
 }
 
+button{
+  
+}
+
+.homepage{
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.homepage__cards{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn__section{
+  margin: 0 35%;
+}
+
+.prev__btn{
+  width: 100px;
+}
+
+.next__btn{
+  float: right;
+  width: 100px;
+}
+
 .search-cards{
 
 }
